@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { StatusBar } from "expo-status-bar";
-import { ActivityIndicator, FlatList, Text, View } from "react-native";
-import styles from "../styles"
+import { ActivityIndicator, FlatList, Text, View, StyleSheet } from "react-native";
 
 const Breweries = () => {
 
@@ -40,5 +39,25 @@ const Breweries = () => {
       </View>
     )
   }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+
+  item: {
+    backgroundColor: '#a0c5e8',
+    borderRadius: 7,
+    margin: 10,
+    padding: 30,
+    alignSelf: 'stretch',
+    alignItems: 'center',
+    justifyContent: 'center',
+    textAlign: 'center',
+  },
+
+})
 
 export default Breweries
