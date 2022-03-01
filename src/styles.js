@@ -17,10 +17,34 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
       textAlign: 'center',
     },
+
     image: {
       flex:1,
       justifyContent:'center',
-      resizeMode: 'cover'
+      resizeMode: 'cover',
+    },
+
+    homeText: {
+      color: "white",
+      fontSize: 42,
+      lineHeight: 84,
+      fontWeight: "bold",
+      textAlign: "center",
+      paddingTop: 30
+    },
+
+    button: {
+      alignItems: 'center',
+      justifyContent: 'center',
+      paddingVertical: 12,
+      paddingHorizontal: 32,
+      borderRadius: 4,
+      elevation: 3,
+      backgroundColor: 'black',
+    },
+
+    buttonText: {
+      color: 'white'
     }
   });
 

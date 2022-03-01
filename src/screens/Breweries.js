@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { StatusBar } from "expo-status-bar";
-import { ActivityIndicator, FlatList, Text } from "react-native";
-import "../styles"
+import { ActivityIndicator, FlatList, Text, View } from "react-native";
+import styles from "../styles"
 
-const Breweries = (props) => {
+const Breweries = () => {
 
   const URL = 'https://api.openbrewerydb.org/breweries?by_city=fort_collins';
   const [isLoading, setIsLoading] = useState(true)
@@ -19,6 +19,7 @@ const Breweries = (props) => {
     } finally {
       setIsLoading(false)
     }
+  }
     useEffect(() => getBreweries(), []);
 
     return (
@@ -39,6 +40,5 @@ const Breweries = (props) => {
       </View>
     )
   }
-}
 
 export default Breweries
