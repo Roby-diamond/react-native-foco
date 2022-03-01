@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { StatusBar } from "expo-status-bar";
-import { ActivityIndicator, FlatList, Text, View, StyleSheet } from "react-native";
+import { ActivityIndicator, FlatList, Text, View, StyleSheet, Linking, TouchableOpacity } from "react-native";
 
 const Breweries = () => {
 
@@ -29,9 +29,12 @@ const Breweries = () => {
             data={breweries}
             keyExtractor={({ id }, index) => id}
             renderItem={({ item }) => (
+              <TouchableOpacity
+              onPress={ ()=>{ Linking.openURL(`${item.website_url}`)}}>
               <Text style={styles.item}>
                 {item.name} {'\n'} {item.street}
               </Text>
+              </TouchableOpacity>
             )}
           />
         }
@@ -48,9 +51,12 @@ const styles = StyleSheet.create({
   },
 
   item: {
-    backgroundColor: '#a0c5e8',
+    backgroundColor: '#bd5d38',
+    borderWidth: 2,
     borderRadius: 7,
-    margin: 10,
+    color: 'white',
+    fontSize: 18,
+    margin: 12,
     padding: 30,
     alignSelf: 'stretch',
     alignItems: 'center',
