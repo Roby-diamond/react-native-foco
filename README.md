@@ -1,4 +1,4 @@
-# explore-foco
+# Explore Foco
 
 A React Native app that allows users to look up local Fort Collins Breweries
 
