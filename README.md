@@ -1,6 +1,6 @@
-# react-native-foco
+# explore-foco
 
-A book search app that uses both the Google Books and OpenLibrary APIs
+A React Native app that allows users to look up local Fort Collins Breweries
 
 ## Technologies Used
 
